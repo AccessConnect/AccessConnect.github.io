@@ -1,1 +1,0 @@
-AccessConnect 2.0 — Classic HTML version. Place folder in MAMP htdocs and open in browser.
