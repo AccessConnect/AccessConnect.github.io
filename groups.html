@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Группы - AccessConnect</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container inner">
+    <div class="logo"><div class="badge">AC</div><div>AccessConnect</div></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="groups.html" class="active">Группы</a>
+      <a href="events.html">Мероприятия</a>
+      <a href="volunteers.html">Волонтёры</a>
+    </nav>
+    <div class="actions">
+      <a href="register.html" class="btn">Регистрация</a>
+      <a href="login.html" class="btn primary">Войти</a>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <h1 style="margin:18px 0">Поиск групп и сопровождения</h1>
+  <p class="small">Ищи группы по интересам и запрашивай сопровождение у волонтёров.</p>
+
+  <div style="margin-top:12px" class="search-bar">
+    <input id="group-search" class="input" placeholder="Поиск группы или интереса..." />
+    <select id="group-city" class="input" style="max-width:200px">
+      <option value="">Все города</option>
+    </select>
+  </div>
+
+  <div id="groups" class="city-grid" style="margin-top:12px"></div>
+
+  <section style="margin-top:18px" class="card">
+    <h3>Запрос сопровождения</h3>
+    <p class="small">Заполни форму, чтобы отправить запрос локальным волонтёрам.</p>
+    <form id="request-form" style="margin-top:8px;display:grid;gap:8px">
+      <input id="req-name" class="input" placeholder="Имя" required>
+      <input id="req-city" class="input" placeholder="Город" required>
+      <input id="req-date" class="input" placeholder="Дата и время" required>
+      <textarea id="req-note" class="input" placeholder="Коротко опиши, какая помощь нужна" style="height:100px"></textarea>
+      <div style="display:flex;gap:8px">
+        <button type="submit" class="btn primary">Отправить запрос</button>
+        <button type="button" id="req-clear" class="btn">Очистить</button>
+      </div>
+    </form>
+    <div id="req-result" style="margin-top:10px"></div>
+  </section>
+
+</main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>AccessConnect — Платформа для социализации и помощи людям с ОВЗ</div>
+      <div>
+        <a href="policy.html" class="small">Политика</a>
+        <a href="#" class="small" style="margin-left:10px;">Поддержка</a>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

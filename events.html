@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Мероприятия — AccessConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container inner">
+      <div class="logo">
+        <div class="badge">AC</div>
+        <span>AccessConnect</span>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="groups.html">Группы</a>
+        <a href="events.html" class="active">Мероприятия</a>
+        <a href="volunteers.html">Волонтёры</a>
+      </nav>
+
+    <div class="actions">
+      <a href="register.html" class="btn">Регистрация</a>
+      <a href="login.html" class="btn primary">Войти</a>
+    </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Мероприятия</h1>
+      <p>Смотри, где проходят события и сколько людей уже записалось.</p>
+    </section>
+
+    <section class="events-section">
+      <div class="search-bar">
+        <input id="event-search" class="input" placeholder="Поиск по городу или названию..." />
+        <select id="filter-city" class="input city-select">
+          <option value="">Все города</option>
+        </select>
+      </div>
+
+      <div id="events" class="city-grid"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button id="close-modal" class="close-btn">Закрыть</button>
+      </div>
+      <p id="modal-desc" class="small"></p>
+      <h3>Кто записался</h3>
+      <ul id="modal-news" class="attendees-list"></ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>AccessConnect — Платформа для социализации и помощи людям с ОВЗ</div>
+      <div>
+        <a href="policy.html" class="small">Политика</a>
+        <a href="#" class="small" style="margin-left:10px;">Поддержка</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

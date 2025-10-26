@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход — AccessConnect</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container inner">
+    <div class="logo"><div class="badge">AC</div><div>AccessConnect</div></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="groups.html">Группы</a>
+      <a href="events.html">Мероприятия</a>
+      <a href="volunteers.html">Волонтёры</a>
+    </nav>
+    <div class="actions">
+      <a href="register.html" class="btn">Регистрация</a>
+      <a href="login.html" class="btn primary">Войти</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="display:flex;justify-content:center;align-items:center;min-height:70vh;">
+  <div class="card" style="max-width:400px;width:100%;padding:30px;text-align:center;">
+    <h2>Вход</h2>
+    <form id="loginForm" style="display:flex;flex-direction:column;gap:10px;margin-top:20px;">
+      <input type="email" name="email" placeholder="Email" required class="input">
+      <input type="password" name="password" placeholder="Пароль" required class="input">
+      <button type="submit" class="btn primary" style="margin-top:10px;">Войти</button>
+      <div class="small" style="margin-top:10px;">Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></div>
+    </form>
+  </div>
+</main>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const res = await fetch('/api/login', {method:'POST', body: formData});
+  console.log(await res.text());
+});
+</script>
+</body>
+</html>
